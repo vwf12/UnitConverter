@@ -8,20 +8,11 @@
 import SwiftUI
 
 struct LengthView: View {
-    init() {
-        //this changes the "thumb" that selects between items
-//        UISegmentedControl.appearance().selectedSegmentTintColor = .white
-        //and this changes the color for the whole "bar" background
-//        UISegmentedControl.appearance().backgroundColor = .purple
-
-
-        //this will change the font size
-        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 12)], for: .normal)
-
-        //these lines change the text color for various states
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.blue], for: .selected)
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.blue], for: .normal)
-    }
+//    init() {
+//
+//        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 12)], for: .normal)
+//
+//    }
     
     
     @State private var inputValue = ""

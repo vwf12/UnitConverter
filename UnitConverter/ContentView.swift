@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var active: Bool = false
+    @State private var tempActive: Bool = false
+    @State private var volActive: Bool = false
+    @State private var lengthActive: Bool = false
+    @State private var timeActive: Bool = false
     
 var body: some View {
     NavigationView() {
         VStack {
             Divider()
-            NavigationLink(destination: TemperatureView(), isActive: $active) {
+            NavigationLink(destination: TemperatureView()) {
                 Text("Temperature 🌡")
                     .font(.largeTitle)
                     .accentColor(.black)
@@ -25,7 +29,7 @@ var body: some View {
                                           maxHeight: .infinity)
             }
             Divider()
-                NavigationLink(destination: VolumeView(), isActive: $active) {
+                NavigationLink(destination: VolumeView()) {
                     Text("Volume 🪣")
                         .font(.largeTitle)
                         .accentColor(.black)
@@ -37,7 +41,7 @@ var body: some View {
                     
                 }
             Divider()
-                NavigationLink(destination: LengthView(), isActive: $active) {
+                NavigationLink(destination: LengthView()) {
                     Text("Length 📏")
                         .font(.largeTitle)
                         .accentColor(.black)
@@ -48,7 +52,7 @@ var body: some View {
                                               maxHeight: .infinity)
                 }
             Divider()
-                NavigationLink(destination: TimeView(), isActive: $active) {
+                NavigationLink(destination: TimeView()) {
                     Text("Time 🕰")
                         .font(.largeTitle)
                         .accentColor(.black)

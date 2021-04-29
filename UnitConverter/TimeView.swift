@@ -9,18 +9,8 @@ import SwiftUI
 
 struct TimeView: View {
     init() {
-        //this changes the "thumb" that selects between items
-//        UISegmentedControl.appearance().selectedSegmentTintColor = .white
-        //and this changes the color for the whole "bar" background
-//        UISegmentedControl.appearance().backgroundColor = .purple
 
-
-        //this will change the font size
         UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 10)], for: .normal)
-
-        //these lines change the text color for various states
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.blue], for: .selected)
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.blue], for: .normal)
     }
     
     
@@ -28,8 +18,7 @@ struct TimeView: View {
     @State private var inputScale = 0
     @State private var outputScale = 1
     let scales = ["Seconds", "Minutes", "Hours", "Days", "Months", "Years"]
-    
-    
+
     var convertedValue: Double {
         let inputScaleSelection = scales[inputScale]
         let outputScaleSelection = scales[outputScale]
